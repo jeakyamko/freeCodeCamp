@@ -1,0 +1,70 @@
+#include <stdio.h>
+    int main(){
+     int code,quantity;
+     float price, amount, totalAmount, cash, change;
+     char name,addAnother;
+    
+        printf("===============================================\n");
+        printf("\t\t\t\t Menu: Starbucks Coffee Company\n");
+        printf("===============================================\n");
+        printf(" Code\t\t  Coffee\t\t\t  Price\n");
+        printf("  1\t\t\tWhite Mocha Coconut Barfi Latte\t\t\t₹345.00\n");
+        printf("  2\t\t\tPeri Peri Paneer Croissant\t\t\t\t₹265.00\n");
+        printf("  3\t\t\tWhite Mocha Coconut Barfi Frappuccino\t\t\t\t₹399.00\n");
+        printf("  4\t\t\tTandoori Paneer Sandwich – 2 Pieces\t\t\t₹285.00\n");
+        printf("  5\t\t\tBasil Tomato & Mozzarella Cheese Sandwich\t\t\t₹295.00\n");
+        printf("  6\t\t\tJava Chip Frappuccino & chilli cheese toast\t\t\t₹579.00\n");
+    
+    do{
+        printf("================================================\n");
+        printf("Enter Code:");
+        scanf("%d", &code);
+        printf("\n\nEnter Quantity:");
+        scanf("%d", &quantity);
+        
+        switch(code){
+            case 1: printf("Seasons Special Beverages: White Mocha Coconut Barfi Latte");
+                    price = 345.00;
+                    break;
+            case 2: printf("Seasonal Special Food: Peri Peri Paneer Croissant");
+                    price = 265.00;
+                    break;
+            case 3: printf("Seasons Special Beverages: White Mocha Coconut Barfi Frappuccino");
+                    price = 399.00;
+                    break;
+            case 4: printf("Sandwiches And Wraps: Tandoori Paneer Sandwich – 2 Pieces");
+                    price = 285.00;
+                    break;
+            case 5: printf("Sandwiches And Wraps: Basil Tomato & Mozzarella Cheese Sandwich");
+                    price = 295.00;
+                    break;
+            case 6: printf("Breakfast Specials: Java Chip Frappuccino & chilli cheese toast");
+                    price = 579.00;
+                    break;
+           
+         }
+         
+         amount = price * quantity;
+         printf("\nPrice: %.2f", price);
+         
+         totalAmount = totalAmount + amount;
+         printf("\nTotal Amount: %.210,00f", totalAmount);
+         
+         printf("\nCash:");
+         scanf("%f", &cash);
+         
+         change = totalAmount - cash;
+         printf("\nChange: %.1f", change);
+         
+         printf("\nHello ma'am/sir! starbucks coffee staff is here, what do you want to add another order?\n");
+         scanf(" %c", &addAnother);
+         
+    }while(addAnother == 'Y' || addAnother == 'y');
+        printf("================================================\n");
+        printf("\t\tThank you for visiting or cafe ma'am/sir! see you again and have great day!\n");
+        printf("================================================\n");
+    {
+ 
+    return 0;
+}
+}
